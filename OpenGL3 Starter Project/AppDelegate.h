@@ -1,15 +1,8 @@
-//
-//  AppDelegate.h
-//  OpenGL3 Starter Project
-//
-//  Created by Stefano Pigozzi on 9/29/12.
-//
-//
-
 #import <Cocoa/Cocoa.h>
+#import "views/OpenGLWindow.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet OpenGLWindow *window;
 
 @end

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'OpenGL3 Starter Project' target in the 'OpenGL3 Starter Project' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

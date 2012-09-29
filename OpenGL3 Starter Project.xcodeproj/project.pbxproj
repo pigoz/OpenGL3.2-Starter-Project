@@ -15,6 +15,7 @@
 		7B0835C61616E02300CE69C1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B0835C41616E02300CE69C1 /* MainMenu.xib */; };
 		7B0835E41616E70500CE69C1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0835E31616E70500CE69C1 /* OpenGL.framework */; };
 		7B0835F01616F2A200CE69C1 /* OpenGLWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0835EF1616F2A200CE69C1 /* OpenGLWindow.m */; };
+		7B0835F31617209600CE69C1 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0835F21617209600CE69C1 /* OpenGLView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		7B0835E31616E70500CE69C1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		7B0835EE1616F2A200CE69C1 /* OpenGLWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLWindow.h; sourceTree = "<group>"; };
 		7B0835EF1616F2A200CE69C1 /* OpenGLWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLWindow.m; sourceTree = "<group>"; };
+		7B0835F11617209600CE69C1 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		7B0835F21617209600CE69C1 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 		7B0835ED1616F2A200CE69C1 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7B0835F11617209600CE69C1 /* OpenGLView.h */,
+				7B0835F21617209600CE69C1 /* OpenGLView.m */,
 				7B0835EE1616F2A200CE69C1 /* OpenGLWindow.h */,
 				7B0835EF1616F2A200CE69C1 /* OpenGLWindow.m */,
 			);
@@ -185,6 +190,7 @@
 				7B0835BC1616E02300CE69C1 /* main.m in Sources */,
 				7B0835C31616E02300CE69C1 /* AppDelegate.m in Sources */,
 				7B0835F01616F2A200CE69C1 /* OpenGLWindow.m in Sources */,
+				7B0835F31617209600CE69C1 /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

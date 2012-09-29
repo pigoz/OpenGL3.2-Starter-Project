@@ -5,6 +5,10 @@
 
 #import <OpenGL/CGLMacro.h>
 
+extern void initialize_opengl(CGLContextObj cgl_ctx);
+extern void uninitialize_opengl(CGLContextObj cgl_ctx);
+extern void render(CGLContextObj cgl_ctx);
+
 @implementation OpenGLView {
     CVDisplayLinkRef displayLink;
 }
@@ -47,10 +51,12 @@
     CVDisplayLinkSetCurrentCGDisplayFromOpenGLContext(displayLink, cglContext,
                                                       cglPixelFormat);
 
+    initialize_opengl(cglContext);
+
     CVDisplayLinkStart(displayLink);
 }
 
-- (CGLContextObj) willStartDrawing
+- (CGLContextObj)willStartDrawing
 {
     CGLContextObj cgl_ctx = [[self openGLContext] CGLContextObj];
     CGLSetCurrentContext(cgl_ctx);
@@ -58,7 +64,7 @@
     return cgl_ctx;
 }
 
-- (void) didFinishDrawing: (CGLContextObj) cgl_ctx;
+- (void)didFinishDrawing: (CGLContextObj) cgl_ctx;
 {
     CGLUnlockContext(cgl_ctx);
 }
@@ -66,24 +72,20 @@
 - (CVReturn)render
 {
     CGLContextObj cgl_ctx = [self willStartDrawing];
-
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    [[self openGLContext] flushBuffer];
-
+    render(cgl_ctx);
     [self didFinishDrawing:cgl_ctx];
 
     return kCVReturnSuccess;
 }
 
-- (void) reshape
+- (void)reshape
 {
     CGLContextObj cgl_ctx = [self willStartDrawing];
 	[super reshape];
     [self didFinishDrawing:cgl_ctx];
 }
 
-- (void) update
+- (void)update
 {
     CGLContextObj cgl_ctx = [self willStartDrawing];
 	[super update];
@@ -93,10 +95,11 @@
 - (void)dealloc
 {
     CVDisplayLinkRelease(displayLink);
+    uninitialize_opengl([[self openGLContext] CGLContextObj]);
     [super dealloc];
 }
 
-- (void) drawRect:(NSRect)dirtyRect
+- (void)drawRect:(NSRect)dirtyRect
 {
     [self render];
 }

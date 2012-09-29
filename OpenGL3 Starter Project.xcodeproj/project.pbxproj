@@ -17,6 +17,7 @@
 		7B0835F01616F2A200CE69C1 /* OpenGLWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0835EF1616F2A200CE69C1 /* OpenGLWindow.m */; };
 		7B0835F31617209600CE69C1 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0835F21617209600CE69C1 /* OpenGLView.m */; };
 		7B3FE1131617787200FB2429 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3FE1121617787200FB2429 /* QuartzCore.framework */; };
+		7B3FE1171617821900FB2429 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3FE1161617821900FB2429 /* Renderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		7B0835F11617209600CE69C1 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
 		7B0835F21617209600CE69C1 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
 		7B3FE1121617787200FB2429 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7B3FE1161617821900FB2429 /* Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		7B0835B51616E02300CE69C1 /* OpenGL3 Starter Project */ = {
 			isa = PBXGroup;
 			children = (
+				7B3FE1151617821900FB2429 /* rendering */,
 				7B0835ED1616F2A200CE69C1 /* views */,
 				7B0835C11616E02300CE69C1 /* AppDelegate.h */,
 				7B0835C21616E02300CE69C1 /* AppDelegate.m */,
@@ -126,6 +129,14 @@
 				7B0835EF1616F2A200CE69C1 /* OpenGLWindow.m */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		7B3FE1151617821900FB2429 /* rendering */ = {
+			isa = PBXGroup;
+			children = (
+				7B3FE1161617821900FB2429 /* Renderer.m */,
+			);
+			path = rendering;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				7B0835C31616E02300CE69C1 /* AppDelegate.m in Sources */,
 				7B0835F01616F2A200CE69C1 /* OpenGLWindow.m in Sources */,
 				7B0835F31617209600CE69C1 /* OpenGLView.m in Sources */,
+				7B3FE1171617821900FB2429 /* Renderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

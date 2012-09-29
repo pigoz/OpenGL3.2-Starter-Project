@@ -3,10 +3,9 @@
 #define NSPIXFMT NSOpenGLPixelFormat
 #define NSCTX    NSOpenGLContext
 
-#import <OpenGL/CGLMacro.h>
-
 extern void initialize_opengl(CGLContextObj cgl_ctx);
 extern void uninitialize_opengl(CGLContextObj cgl_ctx);
+extern void reshape (CGLContextObj cgl_ctx, int w, int h);
 extern void render(CGLContextObj cgl_ctx);
 
 @implementation OpenGLView {
@@ -82,6 +81,7 @@ extern void render(CGLContextObj cgl_ctx);
 {
     CGLContextObj cgl_ctx = [self willStartDrawing];
 	[super reshape];
+    reshape(cgl_ctx, [self bounds].size.width, [self bounds].size.height);
     [self didFinishDrawing:cgl_ctx];
 }
 

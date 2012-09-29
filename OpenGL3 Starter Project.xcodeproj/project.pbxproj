@@ -16,6 +16,7 @@
 		7B0835E41616E70500CE69C1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0835E31616E70500CE69C1 /* OpenGL.framework */; };
 		7B0835F01616F2A200CE69C1 /* OpenGLWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0835EF1616F2A200CE69C1 /* OpenGLWindow.m */; };
 		7B0835F31617209600CE69C1 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0835F21617209600CE69C1 /* OpenGLView.m */; };
+		7B3FE1131617787200FB2429 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3FE1121617787200FB2429 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		7B0835EF1616F2A200CE69C1 /* OpenGLWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLWindow.m; sourceTree = "<group>"; };
 		7B0835F11617209600CE69C1 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
 		7B0835F21617209600CE69C1 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		7B3FE1121617787200FB2429 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3FE1131617787200FB2429 /* QuartzCore.framework in Frameworks */,
 				7B0835E41616E70500CE69C1 /* OpenGL.framework in Frameworks */,
 				7B0835B01616E02300CE69C1 /* Cocoa.framework in Frameworks */,
 			);
@@ -72,6 +75,7 @@
 		7B0835AE1616E02300CE69C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B3FE1121617787200FB2429 /* QuartzCore.framework */,
 				7B0835E31616E70500CE69C1 /* OpenGL.framework */,
 				7B0835AF1616E02300CE69C1 /* Cocoa.framework */,
 				7B0835B11616E02300CE69C1 /* Other Frameworks */,
@@ -314,6 +318,7 @@
 				7B0835DF1616E02300CE69C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

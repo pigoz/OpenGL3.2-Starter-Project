@@ -8,9 +8,6 @@
 #define _DEFAULT_MASK         NSTitledWindowMask|NSClosableWindowMask|\
                               NSMiniaturizableWindowMask|NSResizableWindowMask
 
-#define _FULLSCREEN_LEVEL     NSNormalWindowLevel + 1
-#define _DEFAULT_LEVEL        NSNormalWindowLevel
-
 @implementation OpenGLWindow
 
 @synthesize fullscreen    = _fullscreen;
@@ -35,7 +32,6 @@
         [NSApp setPresentationOptions: _HIDDEN_PRESENTATION];
         [self setHasShadow: NO];
         [self setStyleMask: _BORDERLESS_MASK];
-        [self setLevel: _FULLSCREEN_LEVEL];
         [self setMovableByWindowBackground: NO];
         self.windowedFrame = [self frame];
         [self setFrame:[[self screen] frame] display:YES];
@@ -43,7 +39,6 @@
         [NSApp setPresentationOptions: _DEFAULT_PRESENTATION];
         [self setHasShadow: YES];
         [self setStyleMask: _DEFAULT_MASK];
-        [self setLevel: _DEFAULT_LEVEL];
         [self setMovableByWindowBackground: YES];
         [self setFrame:self.windowedFrame display:YES];
         [self setTitle:self.windowedTitle];
